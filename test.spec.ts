@@ -1,5 +1,5 @@
 import { expect, config } from "chai";
-import { apiCallGet } from "./processOrder";
+import { apiCallGet, apiCallPost } from "./processOrder";
 import fs = require("fs");
 import MockAdapter from "axios-mock-adapter";
 import axios from "axios";
@@ -32,4 +32,25 @@ describe("Test apiCalls", () => {
       });
     expect(resp.data).to.eql(compareResult);
   });
+  it("Test apiCallPost using axios.post mock and JSON payload file", async () => {
+    const fileLink = fs.readFileSync("./inputLayout.json");
+    const parameters = JSON.parse(fileLink.toString("utf8"));
+    const mockUrl = "https://jsonplaceholder.typicode.com/todos/1";
+    const replyMessage = "It has been POSTED";
+    const body = {
+      prodIdAlias: "WS5",
+      parameters,
+    };
+    const headers = {
+      "Content-Type": "application/json",
+      "Authorization": "Basic UnlhblRlc3Q6Y2RzMTAwMQ==",
+    };
+    const mock = new MockAdapter(axios);
+    mock.onPost(mockUrl).reply(201, replyMessage);
+    const resp = await apiCallPost(parameters)
+      .catch((err: any) => {
+        console.log("The Error: " + err);
+      });
+    expect(resp.data).to.eql("It has been POSTEDx");
+  });  
 });
