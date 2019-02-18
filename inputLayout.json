@@ -1,0 +1,65 @@
+{
+  "transactionSource": "Online",
+  "billToCustomer": {
+    "firstName": "Timothy",
+    "lastName": "Smith",
+    "address1": "777 Casino St",
+    "city": "Des Moines",
+    "state": "IA",
+    "zipcode": "50315"
+  },
+  "shipToCustomer": {
+    "firstName": "Yin",
+    "lastName": "Yang",
+    "address1": "8 Is Greate St",
+    "city": "Des Moines",
+    "state": "IA",
+    "zipcode": "50315"
+  },  
+  "cart": [
+    {
+      "itemInfo": {
+        "brandName": "Samsung",
+        "itemCategory": "Appliance"
+      },
+      "itemDetail": [
+        {
+          "itemName": "Microwave",
+          "itemCode": "123456",
+          "quantity": "1",
+          "value": "10.00"
+        }
+      ],
+      "payment": {
+        "paymentType": "Credit Card",
+        "creditCardType": "Visa",
+        "creditCardNumber": "4111111111111111",
+        "creditCardExpireMonth": "05",
+        "creditCardExpireYear": "2019",
+        "creditCardCVV": "123"
+      }
+    },
+    {
+      "itemInfo": {
+        "brandName": "Apple",
+        "itemCategory": "Electronic"
+      },
+      "itemDetail": [
+        {
+          "itemName": "Ipad Mini 4",
+          "itemCode": "234567",
+          "quantity": "1",
+          "value": "300.00"
+        }
+      ],
+      "payment": {
+        "paymentType": "Credit Card",
+        "creditCardType": "Visa",
+        "creditCardNumber": "4111111111111111",
+        "creditCardExpireMonth": "05",
+        "creditCardExpireYear": "2019",
+        "creditCardCVV": "123"
+      }
+    }
+  ]
+}

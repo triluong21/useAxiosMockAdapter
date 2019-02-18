@@ -1,0 +1,26 @@
+{
+  "name": "UseAxiosMockAdapter",
+  "version": "1.0.0",
+  "main": "processOrder.ts",
+  "license": "MIT",
+  "scripts": {
+    "test": "node_modules/.bin/mocha \"./{,!(node_modules)/**/}*.spec.ts\" -t 10000 --require ts-node/register --require mocha.env --reporter spec"
+  },
+  "dependencies": {
+    "@types/chai": "^4.1.7",
+    "@types/mocha": "^5.2.6",
+    "@types/node": "^11.9.4",
+    "axios": "^0.18.0",
+    "axios-mock-adapter": "^1.16.0",
+    "babel-loader": "^8.0.5",
+    "chai": "^4.2.0",
+    "fs": "^0.0.1-security",
+    "mocha": "^5.2.0",
+    "ts-lint": "^4.5.1",
+    "ts-loader": "^5.3.3",
+    "ts-node": "^8.0.2",
+    "typescript": "^3.3.3",
+    "webpack": "^4.29.4",
+    "webpack-cli": "^3.2.3"
+  }
+}

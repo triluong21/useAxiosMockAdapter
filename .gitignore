@@ -1,0 +1,10 @@
+# package directories
+node_modules
+jspm_packages
+/dist/
+yarn-error.log
+.nyc_output
+# Serverless directories
+.serverless
+coverage/
+.dynamodb
